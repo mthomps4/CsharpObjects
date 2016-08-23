@@ -1,7 +1,11 @@
 ﻿namespace TowerDefense {
     class Game {
-        public void Main(){
-            Tower tower = new Tower(); //Class Tower instance tower object Tower(); 
+        public static void Main(){
+            Map firstMap = new Map(8, 5);
+
+            int area = firstMap.Width * firstMap.Height;
+            System.Console.WriteLine(area); 
+
         }
     }
 }

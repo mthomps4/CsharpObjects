@@ -40,7 +40,11 @@
     <Compile Include="Game.cs" />
     <Compile Include="Invader.cs" />
     <Compile Include="Map.cs" />
+    <Compile Include="Points.cs" />
     <Compile Include="Tower.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
