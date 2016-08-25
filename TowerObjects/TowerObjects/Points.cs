@@ -1,4 +1,6 @@
-﻿namespace TowerDefense
+﻿using System;
+
+namespace TowerDefense
 {
     class Point
     {
@@ -10,11 +12,30 @@
 
         //Constructor Method 
 
-        public Map(int x, int y)
+        public Point(int x, int y)
         {
             X = x;
             Y = y;
         }
 
+        public int DistanceTo(int x, int y)
+        {
+            //int xDiff = (X - x); //subtracts x and y passed into method from X and Y from the Point this method was called on. 
+            //int yDiff = (Y - y);
+
+            //int xDiffSquared = xDiff * xDiff;
+            //int yDiffSquared = yDiff * yDiff;
+        
+            //return (int)Math.Sqrt(xDiffSquared + yDiffSquared);
+
+
+            //refactored 
+            return (int)Math.Sqrt(Math.Pow(X - x, 2) + Math.Pow(Y - y, 2));
+        }
+
+        public int DistanceTo(Point point)
+        {
+            return DistanceTo(point.X, point.Y);
+        }
     }
 }
