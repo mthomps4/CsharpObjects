@@ -7,7 +7,25 @@ namespace TowerDefense {
 
             try
             {
-                MapLocation mapLocation = new MapLocation(20, 20, firstMap);
+                Path path = new Path(
+                    new [] {
+                    new MapLocation(0, 2, firstMap),
+                    new MapLocation(1, 2, firstMap),
+                    new MapLocation(2, 2, firstMap),
+                    new MapLocation(3, 2, firstMap),
+                    new MapLocation(4, 2, firstMap),
+                    new MapLocation(5, 2, firstMap),
+                    new MapLocation(6, 2, firstMap),
+                    new MapLocation(7, 2, firstMap)
+                    }
+                 );
+
+                MapLocation location = path.GetLocationAt(8);
+
+                if (location != null)
+                {
+                    Console.WriteLine(location.X + "," + location.Y);
+                }
             }
             catch (OutOfBoundsException ex)
             {
@@ -18,9 +36,9 @@ namespace TowerDefense {
             {
                 Console.WriteLine("Unhandled Tower Defense Exeption");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("Unhandled Exception"); 
+                Console.WriteLine("Unhandled Exception: " + ex); 
             }
         }
     }
