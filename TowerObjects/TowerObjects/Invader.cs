@@ -11,7 +11,6 @@
         //}
         //For C# auto make get and set with 'public MapLocation Location { get; private set; }' remove field. 
 
-        //DRY Coding 
         public MapLocation Location
         {
             get
@@ -19,6 +18,19 @@
                 return _path.GetLocationAt(_pathStep);
             }
         }
+
+        //Above can be rewritten as 'public MapLocation Location => _path.GetLocationAt(_pathStep);'
+
+        //Invader Health 
+        public int Health { get; private set; } = 2; //Health property Uses DecreaseHealth Method for setting new health status. 
+
+        //True if Invader has reached end of path. 
+        public bool HasScored { get { return _pathStep >= _path.Length; } }
+
+        //True if Invaders Health = 0 
+        public bool IsNeutralized => Health <= 0;
+
+        public bool IsActive => !(IsNeutralized || HasScored);
 
         //Path object to be accessed later 
         private readonly Path _path; 
@@ -33,10 +45,11 @@
         }
 
         //Tell invader to move 
-        public void Move()
+        public void Move() => _pathStep += 1;
+
+        public void DecreaseHealth(int factor)
         {
-            _pathStep += 1;
-            //Use objects instance of path 
+            Health -= factor; 
         }
     }
 }
