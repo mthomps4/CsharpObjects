@@ -3,20 +3,20 @@
 namespace TowerDefense {
     class Game {
         public static void Main(){
-            Map firstMap = new Map(8, 5);
+            Map map = new Map(8, 5);
 
             try
             {
                 Path path = new Path(
                     new [] {
-                    new MapLocation(0, 2, firstMap),
-                    new MapLocation(1, 2, firstMap),
-                    new MapLocation(2, 2, firstMap),
-                    new MapLocation(3, 2, firstMap),
-                    new MapLocation(4, 2, firstMap),
-                    new MapLocation(5, 2, firstMap),
-                    new MapLocation(6, 2, firstMap),
-                    new MapLocation(7, 2, firstMap)
+                    new MapLocation(0, 2, map),
+                    new MapLocation(1, 2, map),
+                    new MapLocation(2, 2, map),
+                    new MapLocation(3, 2, map),
+                    new MapLocation(4, 2, map),
+                    new MapLocation(5, 2, map),
+                    new MapLocation(6, 2, map),
+                    new MapLocation(7, 2, map)
                     }
                  );
 
@@ -41,16 +41,16 @@ namespace TowerDefense {
 
     /*
 
-# int area = firstMap.Width * firstMap.Height;
+# int area = map.Width * map.Height;
 # System.Console.WriteLine(area);
 #
 # Point point = new Point(4, 2);
-# bool isOnMap = firstMap.OnMap(point);
+# bool isOnMap = map.OnMap(point);
 # Console.WriteLine(isOnMap);
 #
 #
 # point = new Point(8, 5);
-# isOnMap = firstMap.OnMap(point);
+# isOnMap = map.OnMap(point);
 # Console.WriteLine(isOnMap);
 #
 # point = new Point(4, 2);
