@@ -20,6 +20,34 @@ namespace TowerDefense {
                     }
                  );
 
+                //New levels would normally be read from individual file but for example ... 
+                Invader[] invaders =
+                {
+                    new Invader(path),
+                    new Invader(path),
+                    new Invader(path),
+                    new Invader(path)
+                };
+
+                //No graphical element for placing towers yet. 
+                Tower[] towers =
+                {
+                    new Tower(new MapLocation(1,3, map)),
+                    new Tower(new MapLocation(3,3, map)),
+                    new Tower(new MapLocation(5,3, map))
+                };
+
+                Level level = new Level(invaders)
+                {
+                    //initialize Towers created 
+                    Towers = towers
+                };
+
+                bool playerWon = level.Play();
+
+                Console.WriteLine("Player " + (playerWon ? "won" : "lost"));
+
+
             }
             catch (OutOfBoundsException ex)
             {
