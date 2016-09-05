@@ -25,9 +25,9 @@ namespace TowerDefense {
                 {
                     new ShieldedInvader(path),
                     new Invader(path),
-                    new Invader(path),
+                    new FastInvader(path),
                     new ShieldedInvader(path),
-                    new Invader(path)
+                    new StrongInvader(path)
                 };
 
                 //No graphical element for placing towers yet. 

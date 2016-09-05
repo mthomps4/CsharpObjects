@@ -8,7 +8,9 @@ namespace TowerDefense
         private static System.Random _random = new System.Random(); //Used for "Shield" 
 
         public ShieldedInvader(Path path) : base(path)
-        {} //Use same path 
+        {
+            Console.WriteLine("He's Got a SHIELD!");
+        } //Use same path 
 
         public override void DecreaseHealth(int factor) //override "overrides" initial Invader DecreaseHealth 
         {

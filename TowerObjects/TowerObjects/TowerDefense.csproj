@@ -37,6 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions.cs" />
+    <Compile Include="FastInvader.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="MapLocation.cs" />
     <Compile Include="Path.cs" />
@@ -45,6 +46,7 @@
     <Compile Include="Map.cs" />
     <Compile Include="Points.cs" />
     <Compile Include="ShieldedInvader.cs" />
+    <Compile Include="StrongInvader.cs" />
     <Compile Include="Tower.cs" />
   </ItemGroup>
   <ItemGroup>
