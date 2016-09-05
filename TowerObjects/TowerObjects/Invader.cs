@@ -22,7 +22,7 @@
         //Above can be rewritten as 'public MapLocation Location => _path.GetLocationAt(_pathStep);'
 
         //Invader Health 
-        public virtual int Health { get; protected set; } = 2; //Health property Uses DecreaseHealth Method for setting new health status. 
+        public virtual double Health { get; protected set; } = 2; //Health property Uses DecreaseHealth Method for setting new health status. 
 
         //True if Invader has reached end of path. 
         public bool HasScored { get { return _pathStep >= _path.Length; } }
@@ -50,7 +50,7 @@
         //Tell invader to move 
         public void Move() => _pathStep += StepSize;
 
-        public virtual void DecreaseHealth(int factor) //Keyword virtual added for Polymorphic Object (ShieldedInvader) Tells code this is One possible solution and that subclasses can provide their own. 
+        public virtual void DecreaseHealth(double factor) //Keyword virtual added for Polymorphic Object (ShieldedInvader) Tells code this is One possible solution and that subclasses can provide their own. 
         {
             Health -= factor;
             System.Console.WriteLine("Shot and hit an invader!");

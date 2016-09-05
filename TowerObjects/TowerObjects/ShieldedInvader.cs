@@ -12,7 +12,7 @@ namespace TowerDefense
             Console.WriteLine("He's Got a SHIELD!");
         } //Use same path 
 
-        public override void DecreaseHealth(int factor) //override "overrides" initial Invader DecreaseHealth 
+        public override void DecreaseHealth(double factor) //override "overrides" initial Invader DecreaseHealth 
         {
             if (_random.NextDouble() < .5) //Decreases 50% of the time. 
             {

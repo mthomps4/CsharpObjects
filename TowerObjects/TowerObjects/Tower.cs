@@ -3,7 +3,7 @@
     class Tower
     {
         protected virtual int Range { get; } = 1;
-        protected virtual int Power{get;} = 1;
+        protected virtual double Power{get;} = 1.0;
         protected virtual double Accuracy{get;} = .75; //75% hit rate 
  
         //for tower miss 
