@@ -47,9 +47,10 @@
         //Tell invader to move 
         public void Move() => _pathStep += 1;
 
-        public void DecreaseHealth(int factor)
+        public virtual void DecreaseHealth(int factor) //Keyword virtual added for Polymorphic Object (ShieldedInvader) Tells code this is One possible solution and that subclasses can provide their own. 
         {
-            Health -= factor; 
+            Health -= factor;
+            System.Console.WriteLine("Shot and hit an invader!");
         }
     }
 }

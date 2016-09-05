@@ -23,9 +23,10 @@ namespace TowerDefense {
                 //New levels would normally be read from individual file but for example ... 
                 Invader[] invaders =
                 {
+                    new ShieldedInvader(path),
                     new Invader(path),
                     new Invader(path),
-                    new Invader(path),
+                    new ShieldedInvader(path),
                     new Invader(path)
                 };
 

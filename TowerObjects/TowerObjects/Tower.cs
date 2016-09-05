@@ -31,8 +31,6 @@
                     if (IsSuccessfulShot())
                     {
                         invader.DecreaseHealth(_power);
-                        System.Console.WriteLine("Shot and hit an invader!");
-
                         if (invader.IsNeutralized)
                         {
                             System.Console.WriteLine("He GONE!");
