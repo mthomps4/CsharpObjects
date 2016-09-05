@@ -3,29 +3,51 @@
 namespace TowerDefense {
     class Game {
         public static void Main(){
-            Map firstMap = new Map(8, 5);
+            Map map = new Map(8, 5);
 
             try
             {
                 Path path = new Path(
                     new [] {
-                    new MapLocation(0, 2, firstMap),
-                    new MapLocation(1, 2, firstMap),
-                    new MapLocation(2, 2, firstMap),
-                    new MapLocation(3, 2, firstMap),
-                    new MapLocation(4, 2, firstMap),
-                    new MapLocation(5, 2, firstMap),
-                    new MapLocation(6, 2, firstMap),
-                    new MapLocation(7, 2, firstMap)
+                    new MapLocation(0, 2, map),
+                    new MapLocation(1, 2, map),
+                    new MapLocation(2, 2, map),
+                    new MapLocation(3, 2, map),
+                    new MapLocation(4, 2, map),
+                    new MapLocation(5, 2, map),
+                    new MapLocation(6, 2, map),
+                    new MapLocation(7, 2, map)
                     }
                  );
 
-                MapLocation location = path.GetLocationAt(8);
-
-                if (location != null)
+                //New levels would normally be read from individual file but for example ... 
+                Invader[] invaders =
                 {
-                    Console.WriteLine(location.X + "," + location.Y);
-                }
+                    new Invader(path),
+                    new Invader(path),
+                    new Invader(path),
+                    new Invader(path)
+                };
+
+                //No graphical element for placing towers yet. 
+                Tower[] towers =
+                {
+                    new Tower(new MapLocation(1,3, map)),
+                    new Tower(new MapLocation(3,3, map)),
+                    new Tower(new MapLocation(5,3, map))
+                };
+
+                Level level = new Level(invaders)
+                {
+                    //initialize Towers created 
+                    Towers = towers
+                };
+
+                bool playerWon = level.Play();
+
+                Console.WriteLine("Player " + (playerWon ? "won" : "lost"));
+
+
             }
             catch (OutOfBoundsException ex)
             {
@@ -47,16 +69,16 @@ namespace TowerDefense {
 
     /*
 
-# int area = firstMap.Width * firstMap.Height;
+# int area = map.Width * map.Height;
 # System.Console.WriteLine(area);
 #
 # Point point = new Point(4, 2);
-# bool isOnMap = firstMap.OnMap(point);
+# bool isOnMap = map.OnMap(point);
 # Console.WriteLine(isOnMap);
 #
 #
 # point = new Point(8, 5);
-# isOnMap = firstMap.OnMap(point);
+# isOnMap = map.OnMap(point);
 # Console.WriteLine(isOnMap);
 #
 # point = new Point(4, 2);
