@@ -23,19 +23,19 @@ namespace TowerDefense {
                 //New levels would normally be read from individual file but for example ... 
                 Invader[] invaders =
                 {
-                    new ShieldedInvader(path),
-                    new Invader(path),
-                    new FastInvader(path),
-                    new ShieldedInvader(path),
+                    //new ShieldedInvader(path),
+                    //new Invader(path),
+                    //new FastInvader(path),
+                   // new ShieldedInvader(path),
                     new StrongInvader(path)
                 };
 
                 //No graphical element for placing towers yet. 
                 Tower[] towers =
                 {
-                    new Tower(new MapLocation(1,3, map)),
-                    new Tower(new MapLocation(3,3, map)),
-                    new Tower(new MapLocation(5,3, map))
+                    //new LongRangeTower(new MapLocation(7,3, map)),
+                    new PowerTower(new MapLocation(3,3, map)),
+                    //new Tower(new MapLocation(5,3, map))
                 };
 
                 Level level = new Level(invaders)
