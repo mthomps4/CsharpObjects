@@ -43,6 +43,7 @@
     <Compile Include="Invader.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Points.cs" />
+    <Compile Include="ShieldedInvader.cs" />
     <Compile Include="Tower.cs" />
   </ItemGroup>
   <ItemGroup>

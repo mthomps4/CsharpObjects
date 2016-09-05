@@ -16,7 +16,7 @@
             Height = height;
         }
 
-        public bool OnMap(Point point)
+        public bool OnMap(Point point) //If point is on map 
         {
             return point.X >= 0 && point.X < Width && point.Y >= 0 && point.Y < Height;
 

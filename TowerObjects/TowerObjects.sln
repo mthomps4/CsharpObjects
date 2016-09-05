@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerObjects", "TowerObjects\TowerObjects.csproj", "{7A323905-9FEF-4211-8DD7-2348AEB21416}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerDefense", "TowerObjects\TowerDefense.csproj", "{7A323905-9FEF-4211-8DD7-2348AEB21416}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
