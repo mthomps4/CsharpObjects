@@ -20,6 +20,14 @@ namespace TowerDefense {
                     }
                  );
 
+                MapLocation location = new MapLocation(0, 2, map);
+
+                if (path.IsOnPath(location))
+                {
+                    Console.WriteLine(location + " is on the path");
+                    return; 
+                }
+
                 //New levels would normally be read from individual file but for example ... 
                 Invader[] invaders =
                 {
