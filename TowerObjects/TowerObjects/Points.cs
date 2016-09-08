@@ -18,6 +18,11 @@ namespace TowerDefense
             Y = y;
         }
 
+        public override string ToString()
+        {
+            return X + "," + Y; 
+        }
+
         public int DistanceTo(int x, int y)
         {
             //int xDiff = (X - x); //subtracts x and y passed into method from X and Y from the Point this method was called on. 

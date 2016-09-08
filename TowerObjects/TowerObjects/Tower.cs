@@ -33,7 +33,7 @@
                         invader.DecreaseHealth(Power);
                         if (invader.IsNeutralized)
                         {
-                            System.Console.WriteLine("He GONE!");
+                            System.Console.WriteLine("He GONE! Invader was shot down at " + invader.Location);
                         }
                     }
                     else

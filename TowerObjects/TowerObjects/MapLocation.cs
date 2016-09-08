@@ -6,7 +6,7 @@
         {
             if (!map.OnMap(this)) //if this point is not on map 
             {
-                throw new OutOfBoundsException(x + "," + y + " is outside the boundaries of the map."); 
+                throw new OutOfBoundsException(this + " is outside the boundaries of the map."); //x + "," + y ... 
             }
         }
 
