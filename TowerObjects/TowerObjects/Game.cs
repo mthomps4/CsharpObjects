@@ -20,6 +20,8 @@ namespace TowerDefense {
                     }
                  );
 
+                
+                //Code for IS ON PATH Method 
                 //MapLocation location = new MapLocation(0, 2, map);
 
                 //if (path.IsOnPath(location))
@@ -28,14 +30,17 @@ namespace TowerDefense {
                 //    return; 
                 //}
 
+                
+                
                 //New levels would normally be read from individual file but for example ... 
-                Invader[] invaders =
+                IInvader[] invaders =
                 {
-                    new ShieldedInvader(path),
-                    new BasicInvader(path),
-                    new FastInvader(path),
-                    new ShieldedInvader(path),
-                    new StrongInvader(path)
+                    new ResurrectingInvader(path)
+                    //new ShieldedInvader(path),
+                    //new BasicInvader(path),
+                    //new FastInvader(path),
+                    //new ShieldedInvader(path),
+                    //new StrongInvader(path)
                 };
 
                 //No graphical element for placing towers yet. 
