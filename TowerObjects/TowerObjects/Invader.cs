@@ -1,6 +1,6 @@
 ﻿namespace TowerDefense
 {
-    abstract class Invader //Creates Abstract base class for "basic Invader" Only Strong,Fast,Shielded etc are concrete usable Invaders. BasicInvader.cs
+    abstract class Invader : IInvader //Invader Impliments IInvader interface.  //Creates Abstract base class for "basic Invader" Only Strong,Fast,Shielded etc are concrete usable Invaders. BasicInvader.cs
     {
         //private MapLocation _location;
 
