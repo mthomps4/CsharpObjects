@@ -6,6 +6,7 @@ namespace TowerDefense
     class ShieldedInvader : Invader
     {
         private static System.Random _random = new System.Random(); //Used for "Shield" 
+        public override double Health { get; protected set; } = 3;//Set Health of FastInvader to 2
 
         public ShieldedInvader(Path path) : base(path)
         {

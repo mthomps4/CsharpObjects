@@ -22,7 +22,7 @@
         //Above can be rewritten as 'public MapLocation Location => _path.GetLocationAt(_pathStep);'
 
         //Invader Health 
-        public virtual double Health { get; protected set; } = 2; //Health property Uses DecreaseHealth Method for setting new health status. 
+        public abstract double Health { get; protected set; } //Abstract Health set for set classes of Invader
 
         //True if Invader has reached end of path. 
         public bool HasScored { get { return _pathStep >= _path.Length; } }
