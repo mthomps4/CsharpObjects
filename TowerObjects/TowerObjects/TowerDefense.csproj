@@ -66,6 +66,7 @@
     <Compile Include="SniperTower.cs" />
     <Compile Include="StrongInvader.cs" />
     <Compile Include="Tower.cs" />
+    <Compile Include="VocabularyWord.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

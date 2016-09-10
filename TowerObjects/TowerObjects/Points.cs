@@ -35,6 +35,14 @@ namespace TowerDefense
             return this.X == that.X && this.Y == that.Y;
         }
 
+        public override int GetHashCode()
+        {
+            //Use X and Y like in Equals 
+            //Multiple by Prime Number to keep as unique as possible 
+
+            return X.GetHashCode() * 31 + Y.GetHashCode();
+        }
+
         public int DistanceTo(int x, int y)
         {
             //int xDiff = (X - x); //subtracts x and y passed into method from X and Y from the Point this method was called on. 
