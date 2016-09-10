@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace TowerDefense
 {
-    interface IInvader
-    {
-        MapLocation Location { get; }
 
+    interface IMappable {
+        MapLocation Location { get; }
+    }
+
+    interface IMovable {
+        //Tell invader to move 
+        void Move();
+    }
+
+    interface IInvader : IMappable, IMovable
+    {
         //Invader Health 
         double Health { get;} //Abstract Health set for set classes of Invader
 
@@ -20,9 +28,6 @@ namespace TowerDefense
         bool IsNeutralized { get; }
 
         bool IsActive { get; }
-
-        //Tell invader to move 
-        void Move();
 
         void DecreaseHealth(double factor);
     }
