@@ -64,6 +64,7 @@
     <Compile Include="Map.cs" />
     <Compile Include="Points.cs" />
     <Compile Include="PowerTower.cs" />
+    <Compile Include="Random.cs" />
     <Compile Include="ResurrectingInvader.cs" />
     <Compile Include="ShieldedInvader.cs" />
     <Compile Include="SniperTower.cs" />

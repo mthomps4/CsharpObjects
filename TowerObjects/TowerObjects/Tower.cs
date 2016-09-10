@@ -7,7 +7,6 @@
         protected virtual double Accuracy{get;} = .75; //75% hit rate 
  
         //for tower miss 
-        private static readonly System.Random _random = new System.Random(); 
         
         private readonly MapLocation _location;
 
@@ -18,7 +17,7 @@
 
         public bool IsSuccessfulShot()
         {
-            return _random.NextDouble() < Accuracy; 
+            return Random.NextDouble() < Accuracy; 
         }
 
         public void FireOnInvaders(IInvader[] invaders)
